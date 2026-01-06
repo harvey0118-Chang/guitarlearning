@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人首頁</title>
+    <link rel="stylesheet" href="css/my.css">
+    <style>
+        .header{
+            height:100vh;
+            background-color: var(--color10);
+            position:relative;
+        }
+
+        .box01{
+            width: 150px;
+            height:150px;
+            background-color: var(--color01);
+            position:absolute;
+            top:0;
+            left:0;
+        }
+
+        .box02{
+            width:150px;
+            height:150px;
+            background-color: var(--color02);
+            position: absolute;
+            top:0;
+            right: 0;
+        }
+
+        .box03{
+            width:150px;
+            height:150px;
+            background-color: var(--color03);
+            position:absolute;
+            bottom: 0;
+            right: 0;
+
+        }
+
+        .box04{
+            width:150px;
+            height:150px;
+            background-color: var(--color04);
+            position:absolute;
+            bottom:0;
+            right:0;
+        }
+
+        .userbox{
+            position:absolute;
+            top: 75px;
+            bottom: 75px;
+            left: 75px;
+            right: 75px;
+            background-color: var(--color05);
+            background-image: url(images/4.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            box-shadow: 5px 5px 10px 2px var(--color13);
+        }
+
+        .usertext{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translateX(-50%);
+            text-align: center;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .usertext h1{
+            font-size: 48px;
+            padding:15px;
+            color: var(--textcolor01);
+        }
+
+        .usertext h2,p{
+            color: var(--textcolor01)
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="box01"></div>
+        <div class="box02"></div>
+        <div class="box03"></div>
+        <div class="box04"></div>
+        <div class="userbox"></div>
+        <div class="usertext">
+            <h1 class="fw-900">~********~</h1>
+            <hr>
+            <h2>來點音樂</h2>
+            <P>煩悶的壓力，來點音樂哼哼歌，用自己喜歡的方式去表達~</P>
+        </div>
+    </div>
+</body>
+</html>

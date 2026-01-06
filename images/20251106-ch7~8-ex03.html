@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch7~8. 時間軸排版練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/my.css">
+    <style>
+        .timeline-section {
+            position: relative;
+        }
+
+        .timeline-section::before {
+            position: absolute;
+            content: "";
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background-color: var(--color01);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="timeline-section">
+            <div class="row align-items-center">
+                <div class="col-md-6 mt-3">
+                    <div style="background-image: url(images/cake001.jpg); height: 260px;" class="bg-cover"></div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="h2 text-center">法式生乳草莓蛋糕</div>
+                    <p>售價：6 吋 NT$880｜8 吋 NT$1,280｜適合 6–10 人分享。甜度：中等；口感：輕盈綿密、草莓清香。建議食用溫度：冷藏 5–8°C。</p>
+                    <p>原料：日本低筋麵粉、發酵奶油、鮮奶油、放牧雞蛋、新鮮草莓、自製草莓果醬、香草莢糖漿。保存：冷藏 2 日內、冷凍 7 日內（解凍後請當日食用）。過敏原：奶、蛋、麩質（小麥）。</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-md-6 mt-3">
+                    <div style="background-image: url(images/cake002.jpg); height: 260px;" class="bg-cover"></div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="h2 text-center">濃可可生巧克力蛋糕</div>
+                    <p>售價：6 吋 NT$860｜8 吋 NT$1,240｜適合 6–10 人分享。甜度：偏低；風味：70% 苦甜巧克力、尾韻帶可可果香。可選「無酒版」。</p>
+                    <p>原料：法芙娜可可粉、70% 苦甜巧克力、鮮奶油、發酵奶油、放牧雞蛋、少許朗姆酒（可去）、海鹽。保存：冷藏 3 日、冷凍 7 日。過敏原：奶、蛋、麩質，可能含堅果微量交叉。</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6 mt-3">
+                    <div style="background-image: url(images/cake003.jpg); height: 260px;" class="bg-cover"></div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="h2 text-center">四季水果卡士達塔</div>
+                    <p>售價：6 吋 NT$780｜8 吋 NT$1,160。甜度：清爽；口感：酥香塔皮 × 香草卡士達 × 當季水果，適合喜歡酸甜平衡的客人。</p>
+                    <p>原料：奶油塔皮（含杏仁粉）、馬達加斯加香草卡士達、新鮮當季水果（依季節更替）、天然果膠。保存：冷藏 2 日，當天風味最佳。過敏原：奶、蛋、麩質、堅果（杏仁）。</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-md-6 mt-3">
+                    <div style="background-image: url(images/cake004.jpg); height: 260px;" class="bg-cover"></div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="h2 text-center">焙茶黑芝麻乳酪</div>
+                    <p>售價：6 吋 NT$900｜8 吋 NT$1,320。甜度：中低；風味：宇治焙茶的麥芽烘焙香疊加黑芝麻堅果氣息，尾段乳酪鹹香收斂。</p>
+                    <p>原料：奶油起司、北海道鮮奶油、宇治焙茶粉、研磨黑芝麻醬、餅乾底（奶油餅乾）、放牧雞蛋。保存：冷藏 3 日、冷凍 10 日（冷藏回溫 10–15 分鐘更香）。過敏原：奶、蛋、麩質、芝麻。</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

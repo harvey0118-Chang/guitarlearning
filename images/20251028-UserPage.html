@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人首頁</title>
+    <link rel="stylesheet" href="css/my.css">
+    <style>
+        .header {
+            height: 100vh;
+            background-color: var(--color10);
+            position: relative;
+        }
+
+        .box01 {
+            width: 150px;
+            height: 150px;
+            background-color: var(--color01);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box02 {
+            width: 150px;
+            height: 150px;
+            background-color: var(--color02);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .box03 {
+            width: 150px;
+            height: 150px;
+            background-color: var(--color03);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .box04 {
+            width: 150px;
+            height: 150px;
+            background-color: var(--color04);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .userbox {
+            position: absolute;
+            top: 75px;
+            bottom: 75px;
+            left: 75px;
+            right: 75px;
+            background-color: var(--color05);
+            background-image: url(images/01.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 5px 5px 10px 2px var(--color13);
+        }
+
+        .usertext {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .usertext h1 {
+            font-size: 48px;
+            padding: 15px;
+            color: var(--textcolor01);
+        }
+
+        .usertext h2,
+        p {
+            color: var(--textcolor01);
+        }
+
+        .content {
+            text-align: center;
+            background-color: var(--color16);
+            padding: 30px;
+        }
+
+        .content h1 {
+            color: var(--color14);
+            font-size: 30px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .content a {
+            display: block;
+            width: 160px;
+            height: 45px;
+            background-color: var(--color15);
+            margin: 20px auto;
+            color: var(--textcolor01);
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 45px;
+            border-radius: 6px;
+        }
+
+        .content a:hover {
+            background-color: var(--color12);
+        }
+
+        .card-container {
+            text-align: center;
+            padding: 20px 0;
+            overflow: hidden;
+        }
+
+        .card {
+            float: left;
+            width: 30%;
+            margin-right: 5%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-last {
+            margin-right: 0;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card h2 {
+            color: var(--color14);
+            margin-top: 10px;
+        }
+
+        .card p {
+            padding: 0 10px 20px;
+            color: #444;
+        }
+
+        .roller {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .roller-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            transform: translateY(-100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .roller:hover .roller-box {
+            transform: translateY(0);
+            transition: transform 2s;
+        }
+
+        .btn-01 {
+            background-color: var(--color15);
+            color: var(--textcolor01);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="box01"></div>
+        <div class="box02"></div>
+        <div class="box03"></div>
+        <div class="box04"></div>
+        <div class="userbox"></div>
+        <div class="usertext">
+            <h1 class="fw-900">xxxxx</h1>
+            <hr>
+            <h2>認真負責</h2>
+            <p>小說進去狀況，登錄規定更好夢幻高效，小遊戲上去存款幹部興趣特點娛樂表演，能源幾乎繼續交流，來電青年。</p>
+        </div>
+    </div>
+    <div class="content">
+        <!-- 三格菜單介紹 -->
+        <div class="card-container">
+            <div class="card roller">
+                <div class="roller-box">
+                    <a href="20251023-1-ex01.html" target="_blank" class="btn-01">了解更多</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=600&q=80"
+                    alt="早午餐">
+                <h2>作品01</h2>
+                <p>HTML CSS 基本語法練習</p>
+            </div>
+            <div class="card roller">
+                <div class="roller-box">
+                    <a href="20251028-2.html" class="btn-01">了解更多</a>
+                </div>
+                <img src="https://plus.unsplash.com/premium_photo-1670601440146-3b33dfcd7e17?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1238"
+                    alt="義大利麵">
+                <h2>作品02</h2>
+                <p>人氣No.1松露野菇義大利麵與香煎干貝搭配白酒醬汁，濃郁而不膩口。</p>
+            </div>
+            <div class="card card-last roller">
+                <div class="roller-box">
+                    <a href="#" class="btn-01">了解更多</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+                    alt="甜點飲品">
+                <h2>甜點與飲品</h2>
+                <p>每日手工甜點與單品咖啡，為您的餐點畫下完美句點。</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

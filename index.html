@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吉他教學網</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        .timeline-section{
+            position: relative;
+        }
+        .timeline-section::before{
+            position:absolute;
+            content: "";
+            top: 0;
+            bottom:0;
+            width: 1px;
+            background-color: var(--color01);
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .carousel-caption-text{
+            background-color: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px 2px #ccc;          
+        }
+        .carousel-caption-box{
+            position:absolute;
+            left:20%;
+            bottom:15%;
+            max-width:500px;
+            text-align: left;
+        }
+        .carousel-badge{
+            color:#ffc107;
+            border: 1px solid rgba(255,193,7,0.5);
+            border-radius:999px;
+            padding:4px 15px;
+            font-size:0.85rem;
+            letter-spacing: 0.2rem;
+            display:inline-block;
+        }
+        .s07-userimg{
+            width:120px;
+            height:120px;
+            background-color: var(--color01);
+            background-image: url(images/4.png);
+            border-radius: 10px;
+            transition:transform 0.6s,box-shadow 0.6s,border-radius 2s;
+        }
+        /*GPT AI*/
+        .s07-userimg:hover{
+            background-image: url(images/5.png);
+            transform:scale(1.2);
+            box-shadow: 2px 2px 10px 10px rgba(0,0,0,0.3);
+            border-radius: 50%;
+        }
+        .s10-text{
+            background-color: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 1px 1px 2px 1px #ccc;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        
+        @media screen and (max-width:768px){
+            .timeline-section::before{
+                display: none;
+            }
+
+            .s06-text{
+                z-index:100;
+                background-color: rgba(0,0,0,0.3);
+                padding:15px;
+                border-radius: 15px;
+                box-shadow: 1px 1px 2px 1px #ccc;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .s06-text p{
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--**************s01************-->
+    <section id="s01" class="bg-secondary">
+        <div class="container py-2" >
+            <div class="text-end">
+                <a href="">
+                   <i class="fa-brands fa-square-facebook text-primary fa-2x"></i>
+                </a>
+                <i class="fa-brands fa-square-x-twitter text-warning fa-2x"></i>
+                <i class="fa-brands fa-line text-success fa-2x"></i>
+                <i class="fa-brands fa-threads fa-2x"></i>
+            </div>
+        </div>
+     </section>
+
+    <!--**************s02************-->
+    <section id="s02">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+             <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="fa-solid fa-guitar text-danger fa-3x"></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                       <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#" ><i 
+                                   class="fa-solid fa-house me-1 text-info"></i>首頁</a>
+                       </li>
+                       <li class="nav-item">
+                          <a class="nav-link" href="#s04"><i class="fa-solid fa-address-card me-1"></i>關於我們</a>
+                       </li>
+                       <li class="nav-item">
+                          <a class="nav-link" href="#s05"><i class="fa-solid fa-address-card me-1"></i>企業精神</a>
+                       </li>
+                       <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+                              aria-expanded="false">
+                              <i class="fa-brands fa-servicestack me-1"></i>服務項目
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">項目01</a></li>
+                              <li><a class="dropdown-item" href="#">項目02</a></li>
+                              <li>
+                                <hr class="dropdown-divider">
+                              </li>
+                              <li><a class="dropdown-item" href="#">項目03</a></li>
+                          </ul>
+                        </li>
+                    </ul>    
+                 <div>
+                      <button class="btn btn-warning"data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-user"></i>登入</button>
+                      <button class="btn btn-success"data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-registered"></i>註冊</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!-- loginModal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-bg-warning">
+        <h1 class="modal-title fs-5 fw-900" id="exampleModalLabel">會員登入</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+           <div class="mb-3">
+                <label for=""class="form-label">帳號</label>
+                <input type="text" class="form-control">
+           </div>
+           <div class="mb-3">
+                <label for=""class="form-label">密碼</label>
+                <input type="password" class="form-control">
+           </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="me-auto" data-bs-toggle="modal" data-bs-target="#loginModal">還沒有帳號</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">確認</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- registerModal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-x1">
+    <div class="modal-content">
+      <div class="modal-header text-bg-success">
+        <h1 class="modal-title fs-5 fw-900" id="exampleModalLabel">會員註冊</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row timeline-section">
+            <div class="col-md-6"></div>
+                <div class="h3 fw-900">會員守則</div>
+                <p><span class="fw-900">一 會員資格</span><br> 
+                     註冊本網站會員時，請確認您已年滿 18 歲，並保證所填寫之姓名、電話、Email 等資料為真實、正確且可聯繫之資訊，如有變更請主動更新。</p>
+                <p><span class="fw-900">二 帳號與密碼</span><br>
+                     會員有義務妥善保管帳號與密碼，不得出借、轉讓或提供第三人使用。凡經由該帳號登入系統後所進行之一切操作，將視為該會員本人之行為。</p>
+                <p><span class="fw-900">三 預約與變更</span><br>
+                     使用線上預約服務時，請確認日期、時段與方案內容。若需變更或取消預約，請依本公司公告之時間與方式辦理，逾期恕不受理，相關費用以現場或網站公告為準。</p>
+                <p><span class="fw-900">四 消費與付款</span><br> 
+                    會員於本網站或門市進行之各項消費與付費方案，均以當時公告之價格與活動內容為準。本公司保留調整方案、價格及優惠內容之權利，恕不另行個別通知。</p>
+                <p><span class="fw-900">五 使用禮貌與安全</span><br>
+                     會員於本會館消費與使用設施時，請遵守現場工作人員指示，並保持基本禮貌與尊重。禁止任何騷擾、喧鬧、暴力、故意損壞設備或影響他人權益之行為，本公司得視情況拒絕提供服務。</p>
+                <p><span class="fw-900">六 個資與通知</span><br> 
+                    會員同意本公司於合理範圍內，利用您提供之聯絡方式（包含 Email、簡訊、通訊軟體等），通知訂單資訊、服務異動及行銷優惠。個人資料僅用於服務與法令許可之範圍內處理。</p>
+                <p><span class="fw-900">七 會員權益變更</span><br> 
+                    本公司保留隨時修改會員守則、調整會員權益與服務內容之權利，修改後之內容將公告於網站，公告後即自動生效。建議會員不定期查閱以維護自身權益。</p>
+                <p class="small text-muted">
+                    完成註冊或勾選「同意」即表示您已詳細閱讀並同意遵守上述會員守則。
+                </p>
+                <div class="form-check form-switch">
+                    <input type="checkbox" name="" id="" class="form-check-input">
+                    <label for="" class="form-check-label">同意/不同意</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                 <div class="mb-3">
+                     <label for=""class="form-label">帳號</label>
+                     <input type="text" class="form-control">
+                 </div>
+                 <div class="mb-3">
+                      <label for=""class="form-label">密碼</label>
+                      <input type="password" class="form-control">
+                </div>
+                <div class="mb-3">
+                     <label for=""class="form-label">確認密碼</label>
+                     <input type="password" class="form-control">
+                </div>
+                <div class="mb-3">
+                     <label for=""class="form-label">Email</label>
+                     <input type="email" class="form-control">
+                </div>
+            </div>
+        </div>
+     </div>        
+      <div class="modal-footer">
+        <a href="#" class="me-auto" data-bs-toggle="modal" data-bs-target="#loginModal">已有帳號</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">確認</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--**************s03************-->
+<section id="s03">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
+         <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+         </div>
+         <div class="carousel-inner">
+            <div class="carousel-item active bg-cover" style="background-image: url(images/1.anne.jpg);
+            height: 85vh;">
+                <div class="carousel-caption d-none d-md-block carousel-caption-box bg-dark bg-opacity-50 p-4 rounded-3 shadow-lg">
+                 <div class="carousel-badge">想自彈自唱學流行歌、或雋永的老歌</div>
+                 <p class="h3">無基礎或有一點基礎，想表現在己喜歡的歌。</p>
+                </div>
+            </div>
+            <div class="carousel-item active bg-cover" style="background-image: url(images/1flowershow.jpg);
+                height: 85vh;">
+                <div class="carousel-caption d-none d-md-block carousel-caption-text">
+                 <h1>塵封已久的吉他，想回味高中大學時光</h1>
+                 <p class="h3">之前有學過但荒廢已久，或者只是會刷刷和弦。</p>
+                </div>
+            </div>
+            <div class="carousel-item active bg-cover" style="background-image: url(images/1kiki.png);
+                 height: 85vh;">
+                <div class="carousel-caption d-none d-md-block carousel-caption-text">
+                 <h1>羨慕會彈唱的朋友</h1>
+                 <p class="h3">羨慕喜歡彈彈唱唱的朋友，也想在野餐時、或公司尾牙帥一波。</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<!--**************s04 countreup************-->
+<section id="s04">
+    <div class="row align-items-center">
+        <div class="col-md-5 bg-cover d-none d-md-block" style="background-image: url(images/picnic.jpg); height: 
+        600px;"></div>
+        <div class="col-md-7 p-5">
+            <div class="h1"><span class="text-success fw-900">自辦野餐演唱會</span></div>
+            <p class="h2">自彈自唱:學習自己喜歡的歌曲，如何運用資源自學。</p>
+            <p class="h2">伴奏:學習別人喜歡的歌曲，別人唱歌、吹陶笛、....時幫忙伴奏。</p>
+            <p class="h2">演奏曲:使用fingerstyle的手法，用吉他彈出旋律、同時彈出和聲或鼓聲。</p>
+            <div class="row mt-5">
+                <div class="col-md-3 text-center">
+                    <div class="h4">年均</div>
+                    <div class="h2 fw-900 text-primary counter01">50<span class="h4">/場</span></div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="h4">獲獎</div>
+                    <div class="h2 fw-900 text-danger counter02">5<span class="h4">/項</span></div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="h4">專業</div>
+                    <div class="h2 fw-900 text-warning counter03">5<span class="h4">/項</span></div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="h4">地點</div>
+                    <div class="h2 fw-900 text-ingo counter04">1<span class="h4">/個</span></div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+<!--**************s05 企業精神標語************-->
+<section id="s05" class="bg-info py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                 <i class="fa-solid fa-music fa-8x text-01 mt-3"></i>
+                 <div class="h1 fw-900 text-success mt-3">旋律</div>
+                 <p class="h5 text-muted d-none d-md-block">一首歌的單音，您常常哼哼唱唱的就是弦律。</p> 
+            </div>
+            <div class="col-md-4 text-center">
+                 <i class="fa-solid fa-microphone fa-8x text-02 mt-3"></i>
+                 <div class="h1 fw-900 text-success mt-3">和聲</div>
+                 <p class="h5 text-muted d-none d-md-block">一首歌的和弦，配合1、3、5、...度音，也就是刷和弦。</p> 
+            </div>
+            <div class="col-md-4 text-center">
+                 <i class="fa-solid  fa-child-reaching fa-8x text-01 mt-3"></i>
+                <div class="h1 fw-900 text-success mt-3">節奏</div>
+                <p class="h5 text-muted d-none d-md-block">什麼樣的拍子或速度，也可以說曲風。</p> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--**************s06 ************-->
+<section id="s06" style="position: relative;">
+    <div class="row">
+        <div class="col-md-5 bg-cover" style="position: absolute; top:0;bottom:0;
+        background-image: url(images/1.png);"></div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-7 s06-text">
+                <div class="h2 text-01 fw-900 text-center my-3">把拔我想唱北鼻蝦嘟嘟~</div>
+                <p>帶小孩互動玩音樂 把拔我想唱北鼻蝦嘟嘟~鯊魚寶寶，嘟嚕嚕嘟嚕
+                   鯊魚寶寶，嘟嚕嚕嘟嚕 鯊魚寶寶，嘟嚕嚕嘟嚕 鯊魚寶寶！
+
+                   鯊魚媽媽，嘟嚕嚕嘟嚕 鯊魚媽媽，嘟嚕嚕嘟嚕 鯊魚媽媽，嘟嚕嚕嘟嚕 鯊魚媽媽！
+
+                   鯊魚爸爸，嘟嚕嚕嘟嚕 鯊魚爸爸，嘟嚕嚕嘟嚕 鯊魚爸爸，嘟嚕嚕嘟嚕 鯊魚爸爸！
+
+                   鯊魚奶奶，嘟嚕嚕嘟嚕 鯊魚奶奶，嘟嚕嚕嘟嚕 鯊魚奶奶，嘟嚕嚕嘟嚕 鯊魚奶奶！
+
+                   鯊魚爺爺，嘟嚕嚕嘟嚕 鯊魚爺爺，嘟嚕嚕嘟嚕 鯊魚爺爺，嘟嚕嚕嘟嚕 鯊魚爺爺！
+               </p>
+               <button class="btn btn-warning">查看更多</button>
+                
+               <div class="row">
+                    <div class="col-md-6">
+                        <div class="h4 text-03 fw-900 text-center my-3">我想唱波力救援小英雄~</div>
+                        <p>帶小孩互動玩音樂 把拔我想唱波力救援小英雄~
+                            
+                           波力波力波力，不怕困難危險 波力波力波力，一直勇往直前 聽見大家的呼喚，立刻出發去救援~
+
+                           他們是救援小英雄，同心協力完成任務，永遠是我們的朋友，保護大家絕不退縮~
+
+                           波力！動作迅速 正義的警車。
+
+                           羅伊！充滿力量 勇敢消防車。
+
+                           安寶！善解人意的救護車。
+
+                           赫利！直昇機起飛了～
+                        </p>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--**************s07 主理人介紹************-->
+<section id="s07">
+    <div class="container">
+        <div class="display-4 fw-900  text-center my-5 text-primary">主理人介紹</div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex alin-items-center">
+                    <i class="fa-solid fa-user fa-8x text-warning me-3"></i>
+                    <div>
+                         <div class="h1 text-danger fw-900 my-3 text-center">主理人01</div>
+                         <p>簡介:不是音樂世家，也沒有被父母栽培學音樂，在國小的音樂課吹直笛，是全班最好的；高中時期在樂器行上了幾次課，但是沒有加入吉他社，總覺得要夠酷、夠帥才能進吉他社。
+大學時期活躍在學生會，研究所階段忙於研究、寫專利、寫國科會計劃，又荒廢了一段時間。等工作後常日班工程師枯燥乏味後，又重拾角落那把吉他。
+起初覺得買書自學就好，但真正組團表演後又自知不足，找了老師家教，才恍然大悟自學真的浪費時間，後續開啟下班後表演的生活。
+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                 <div class="d-flex alin-items-center">
+                      <div class="s07-userimg bg-cover col-4 me-3"></div>
+                      <div>
+                           <div class="h1 text-danger fw-900 my-3 text-center">主理人02</div>
+                           <p>簡介:</p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>    
+</section>
+<!--**************s08 服務價格************-->
+    <section id="s08" style="position: relative;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 py-5">
+                    <dl class="row">
+
+                        <!-- 方案 01 -->
+                        <dt class="col-sm-3">方案</dt>
+                        <dd class="col-sm-9">
+                            <p>適合小型聚會、生日派對、朋友私宴。</p>
+                            <p>。</p>
+                            <p class="fw-900 text-primary">NT$</p>
+                        </dd>
+
+                        <!-- 方案 02 -->
+                        <dt class="col-sm-3">標準方案</dt>
+                        <dd class="col-sm-9">
+                            <p>適用企業活動、求婚派對、小型品牌活動。</p>
+                            <p>。</p>
+                            <p class="fw-900 text-success">NT$</p>
+                        </dd>
+
+                        <!-- 方案 03 -->
+                        <dt class="col-sm-3">全包方案</dt>
+                        <dd class="col-sm-9">
+                            <p>大型活動、尾牙、演出型派對打造。</p>
+                            <p>。</p>
+                            <p class="fw-900 text-danger">NT$</p>
+                        </dd>
+
+                        <!-- 方案 04 -->
+                        <dt class="col-sm-3">客製化專案</dt>
+                        <dd class="col-sm-9">
+                            <p>我們提供客製團隊服務。</p>
+                            <p>。</p>
+                            <p class="fw-900 text-warning">依專案報價</p>
+                        </dd>
+
+                        <!-- 示範巢狀 -->
+                        <dt class="col-sm-3">可追加項目</dt>
+                        <dd class="col-sm-9">
+                            <dl class="row">
+                                <dt class="col-sm-4">熱門加購</dt>
+                                <dd class="col-sm-8">
+                                    <ul class="mb-0">
+                                        <li>專業</li>
+                                        <li>樂團演出</li>
+                                        <li>派對佈置與主題造景</li>
+                                        <li>賓客報到 / 工作人員配置</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </dd>
+
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-md-5 bg-cover"
+                style="position: absolute; top: 0; bottom: 0; background-image: url(images/1Apple.png);"></div>
+        </div>
+    </section>
+
+<!--**************s09 地址和基本資料諮詢************-->
+
+<section id="s09">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14560.308352458655!2d120.6091776!3d24.1690291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d8aaddfd073%3A0xe949a8043a480e5!2z6bql55W25YueLeWPsOS4reS4rea4r-WFremkkOW7s--8jeioreacieW-l-S-humAnw!5e0!3m2!1szh-TW!2stw!4v1763612882055!5m2!1szh-TW!2stw" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="" class="form-label">姓名</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">人數</label>
+                <input type="number" class="form-control">
+            </div>
+            <div class="mb-3">
+                <select name="" id="" class="form-select form-select-lg">
+                    <option value=""disabled selected>---學習目的---</option>
+                    <option value="">自娛娛人</option>
+                    <option value="">親子互動(親友)</option>
+                    <option value="">公司活動自辦小表演(尾牙)</option>
+                    
+                </select>
+            </div>
+            <div class="mb-3">
+                <select name="" id="" class="form-select form-select-lg">
+                    <option value=""disabled selected>---地點---</option>
+                    <option value="">西屯區</option>
+                    <option value="">北屯區</option>
+                    <option value="">南屯區</option>
+                    
+                </select>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!--**************s10 徵才公告************-->
+  <section id="s10">
+    <div class="row">
+        <div class="col-md-6 bg-cover" style="background-image: url(images/3_w.jpeg);height: 360px;">
+            <div class="row">
+                <div class="col-md-7 s10-text ms-4 mt-5">
+                    <small class="text-bg-danger badge">加入我們</small>
+                    <div class="h3">徵求合作夥伴</div>
+                    <p>薪資待遇:XXXXXXX</p>
+                    <p>工作內容:
+                       
+                    </p>
+                    <a href="#" class="btn btn-outline-danger">徵求工作</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 bg-cover pe-4" style="background-image: url(images/2.jpg);height: 360px;">
+            <div class="row justify-content-end">
+                <div class="col-md-7 s10-text ms-4 mt-5">
+                    <small class="text-bg-danger badge">加入我們</small>
+                    <div class="h3">徵求合作夥伴</div>
+                    <p>薪資待遇:XXXXXXX</p>
+                    <p>工作內容:
+  
+                    </p>
+                    <a href="#" class="btn btn-outline-danger">徵求工作</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+<!--**************s11 友站連結************-->
+
+<section id="s12">
+    <div class="container">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!--**************s12 商品輪播************-->
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+   //<!--**************s04 counterup2************-->   
+   const counterUp = window.counterUp.default
+   const callback = entries => {
+	   entries.forEach( entry => {
+		   const el = entry.target
+		   if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+			   counterUp( el, {
+				   duration: 2000,
+				   delay: 16,
+			   })
+			   el.classList.add( 'is-visible' )
+		    }
+	    })
+    }
+    const IO = new IntersectionObserver( callback, { threshold: 1 } )
+  
+    const el01 = document.querySelector( '.counter01' )
+    IO.observe( el01 )
+    const el02 = document.querySelector( '.counter02' )
+    IO.observe( el02 )
+    const el03 = document.querySelector( '.counter03' )
+    IO.observe( el03 )
+    const el04 = document.querySelector( '.counter04' )
+    IO.observe( el04 )
+
+  //**************s09 縣市資料************
+  $(function(){
+      //載入縣市資料
+      $.ajax({
+        type:"GET",
+        url:"js/json/CityCountyData.json",
+        dataType:"json",
+        success:shodata,
+        error:function(){
+            Swal.fire({
+                title:"連線錯誤!",
+                text:"js/json/CityCountyData.json",
+                icon:"error"
+            });
+        }
+      });
+    });
+    function showdata(data){
+       console.log(data);
+
+       $("#s09-city").empty();
+       $("#s09-city").append(`<option value=""disabled selected>---所在地區---</option>`);
+       data.forEach(function(item){
+           console.log(item.CityName);
+
+           let strHTML = `<option value="">${item.CityName}</option>`;
+           $("#s09-city").append(strHTML);
+       });
+
+    }
+
+</script>
+</body>
+</html>
